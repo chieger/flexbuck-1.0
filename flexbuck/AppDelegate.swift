@@ -16,6 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // sets up Parse
+        Parse.setApplicationId("38gxBWoTm8MgBdaLaoBSAlH5b2GXn3lTOeDJP6zJ",
+            clientKey: "9MQ8Dumly4WNM0wWTRHHixc9Ga0G2DJoZzxtmN1L")
+        
+        if PFUser.currentUser() != nil {
+            
+            //this sets up the main storyboard named "Main"
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            // sets up Messege Navigation Controller as a view controller
+            var vc = storyboard.instantiateViewControllerWithIdentifier("LoggedInNavigationController") as! UIViewController
+            
+            // equivilant of taking arrow indicating initial view controller and moving it to vc
+            window?.rootViewController = vc
+        }
+
+        
         return true
     }
 
