@@ -12,6 +12,8 @@
 	<dict>
 		<key>7D5280B2A95909D1BC040ED7E3074CD0179180DA</key>
 		<string>https://github.com/chieger/flexbuck-1.0.git</string>
+		<key>CDB08AD39034AE6C1882FAE4CA2B1C6B9763626B</key>
+		<string>https://github.com/chieger/codePath-Week-3-Project_Mailbox.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>flexbuck.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>7D5280B2A95909D1BC040ED7E3074CD0179180DA</key>
 		<string>..</string>
+		<key>CDB08AD39034AE6C1882FAE4CA2B1C6B9763626B</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/chieger/flexbuck-1.0.git</string>
@@ -28,6 +32,14 @@
 	<string>7D5280B2A95909D1BC040ED7E3074CD0179180DA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CDB08AD39034AE6C1882FAE4CA2B1C6B9763626B</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

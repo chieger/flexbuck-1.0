@@ -13,7 +13,7 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
 
     @IBOutlet weak var tableView: UITableView!
     
-    var students = ["Juneau", "Kingsley", "Charlene", "Rachel", "Brezen", "Sophie"]
+    var students = ["Juneau", "Kingsley", "Charlene", "Rachel", "Brezen", "Sophie", "Chris", "Amanda", "Michaelangela", "student 1", "Student 2"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +47,7 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
         {
         case .Flexbuck:
             println("Push your flexbuck segue")
+            performSegueWithIdentifier("coreValueSegue", sender: nil)
         case .FlexbuckQuery:
                 println("Push your flexbuck query segue")
         case .NTI:
