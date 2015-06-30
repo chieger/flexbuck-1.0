@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D299F449A68ACCEBA3256D3 /* libPods-flexbuck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F6850670BF1A11882C3659 /* libPods-flexbuck.a */; };
+		ED1B48391B41F28700F8766D /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B48381B41F28700F8766D /* HamburgerViewController.swift */; };
+		ED1B483B1B41F31500F8766D /* NewStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B483A1B41F31500F8766D /* NewStudentViewController.swift */; };
 		ED2FFFCC1B39CB02004B82DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2FFFCB1B39CB02004B82DE /* AppDelegate.swift */; };
 		ED2FFFCE1B39CB02004B82DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2FFFCD1B39CB02004B82DE /* ViewController.swift */; };
 		ED2FFFD11B39CB02004B82DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2FFFCF1B39CB02004B82DE /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		46F6850670BF1A11882C3659 /* libPods-flexbuck.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-flexbuck.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3245AD9A4AACC3494DCFE7A /* Pods-flexbuck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flexbuck.release.xcconfig"; path = "Pods/Target Support Files/Pods-flexbuck/Pods-flexbuck.release.xcconfig"; sourceTree = "<group>"; };
+		ED1B48381B41F28700F8766D /* HamburgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
+		ED1B483A1B41F31500F8766D /* NewStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewStudentViewController.swift; sourceTree = "<group>"; };
 		ED2FFFC61B39CB02004B82DE /* flexbuck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flexbuck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2FFFCA1B39CB02004B82DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED2FFFCB1B39CB02004B82DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 		ED2FFFEB1B39CB6D004B82DE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ED1B48381B41F28700F8766D /* HamburgerViewController.swift */,
+				ED1B483A1B41F31500F8766D /* NewStudentViewController.swift */,
 				ED2FFFEC1B39CB9B004B82DE /* LoginViewController.swift */,
 				ED2FFFEE1B39CBBA004B82DE /* StudentListViewController.swift */,
 				ED2FFFF01B39CC18004B82DE /* CoreValueViewController.swift */,
@@ -294,11 +300,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED2FFFEF1B39CBBA004B82DE /* StudentListViewController.swift in Sources */,
+				ED1B483B1B41F31500F8766D /* NewStudentViewController.swift in Sources */,
 				ED2FFFED1B39CB9B004B82DE /* LoginViewController.swift in Sources */,
 				ED2FFFF11B39CC18004B82DE /* CoreValueViewController.swift in Sources */,
 				ED2FFFF61B39D778004B82DE /* StudentCell.swift in Sources */,
 				ED2FFFCE1B39CB02004B82DE /* ViewController.swift in Sources */,
 				ED2FFFCC1B39CB02004B82DE /* AppDelegate.swift in Sources */,
+				ED1B48391B41F28700F8766D /* HamburgerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,17 +9,53 @@
 import UIKit
 
 //Here we conform to the StudentCellDelegate protocol (we implement the method that the protocol declares)
-class StudentListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, StudentCellDelegate {
+class StudentListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, StudentCellDelegate, UIGestureRecognizerDelegate {
 
+    
+    func gestureRecognizer(UIGestureRecognizer,shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
+        return true
+    }
+
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var students = ["Juneau", "Kingsley", "Charlene", "Rachel", "Brezen", "Sophie", "Chris", "Amanda", "Michaelangela", "student 1", "Student 2"]
+    //var students = ["Juneau", "Kingsley", "Charlene", "Rachel", "Brezen", "Sophie", "Chris", "Amanda", "Michaelangela", "student 1", "Student 2"]
+    
+    // pull students from parse
+    var students: [PFObject]! = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "onTimer", userInfo: nil, repeats: true)
+        
+        // executes timer
+        timer.fire()
+
+    }
+    
+    func onTimer() {
+        
+        // this sets up a query in the class "messege"
+        var query = PFQuery(className: "Student")
+        
+        // limits scope of query to only items where the key in the "user" column is the same as the key of the current user.
+        //query.whereKey("user", equalTo: PFUser.currentUser()!)
+        
+        // this looks for everything in the Parse "doc"
+        query.findObjectsInBackgroundWithBlock { (students: [AnyObject]?, error: NSError?) -> Void in
+            
+            // the as! object makes sure that the types match. AnyObject converted to PFObject, the type that we initialized "messeges as
+            
+            self.students = students as! [PFObject]
+            
+            // tells the table view there is new data and to reload
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +69,7 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
         
         var cell = tableView.dequeueReusableCellWithIdentifier("StudentCell") as! StudentCell
         var student = students[indexPath.row]
-        cell.studentNameLabel.text = student
+        cell.studentNameLabel.text = student["firstName"] as? String
         
         //Setting a variable (conceptually called a "delegate") on the cell
         cell.studentCellDelegate = self
@@ -51,9 +87,9 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
         case .FlexbuckQuery:
                 println("Push your flexbuck query segue")
         case .NTI:
-            println("Push your NTI query segue")
+            println("Push your NTI  segue")
         case .NTIQuery:
-                println("Push your NTI segue")
+                println("Push your NTI Query segue")
         }
     }
 }
