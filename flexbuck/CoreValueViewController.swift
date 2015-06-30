@@ -9,9 +9,24 @@
 import UIKit
 
 class CoreValueViewController: UIViewController {
-
+    
+    
+    var type: String!
+    
+    @IBOutlet weak var textLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if type == "flexbuck" {
+            view.backgroundColor = UIColor.blueColor()
+            textLabel.text = type
+        } else {
+            view.backgroundColor = UIColor.redColor()
+            textLabel.text = type
+        }
+        
 
         // Do any additional setup after loading the view.
     }
@@ -21,15 +36,12 @@ class CoreValueViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onBackButton(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
-    */
+    
+    
+    }
+    
 
-}
+

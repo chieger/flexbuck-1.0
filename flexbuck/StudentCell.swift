@@ -131,7 +131,7 @@ class StudentCell: UITableViewCell {
             case 61...260:
                 slideOffScreenHide(550)
                 state = .Flexbuck
-                
+                                
                 //flexbuck query
             case 261...400:
                 slideOffScreenHide(550)

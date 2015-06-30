@@ -10,12 +10,12 @@ import UIKit
 
 //Here we conform to the StudentCellDelegate protocol (we implement the method that the protocol declares)
 class StudentListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, StudentCellDelegate, UIGestureRecognizerDelegate {
-
+    
     
     func gestureRecognizer(UIGestureRecognizer,shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
         return true
     }
-
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,10 +24,12 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
     // pull students from parse
     var students: [PFObject]! = []
     
+    var type: String!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -35,7 +37,7 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
         
         // executes timer
         timer.fire()
-
+        
     }
     
     func onTimer() {
@@ -43,8 +45,9 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
         // this sets up a query in the class "messege"
         var query = PFQuery(className: "Student")
         
+        
         // limits scope of query to only items where the key in the "user" column is the same as the key of the current user.
-        //query.whereKey("user", equalTo: PFUser.currentUser()!)
+        query.whereKey("grade", equalTo: "6")
         
         // this looks for everything in the Parse "doc"
         query.findObjectsInBackgroundWithBlock { (students: [AnyObject]?, error: NSError?) -> Void in
@@ -57,7 +60,7 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
             self.tableView.reloadData()
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -77,20 +80,30 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
         
         return cell
     }
-
+    
     //This method is called by the studentCell
     func studentCellChangedToState(cell: StudentCell, state: StudentCellState) {
         switch (state)
         {
         case .Flexbuck:
             println("Push your flexbuck segue")
+            type = "flexbuck"
             performSegueWithIdentifier("coreValueSegue", sender: nil)
         case .FlexbuckQuery:
-                println("Push your flexbuck query segue")
+            println("Push your flexbuck query segue")
         case .NTI:
             println("Push your NTI  segue")
+            type = "nti"
+            performSegueWithIdentifier("coreValueSegue", sender: nil)
         case .NTIQuery:
-                println("Push your NTI Query segue")
+            println("Push your NTI Query segue")
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        println("im about to Segue to another view controller")
+        var coreValueViewController = segue.destinationViewController as! CoreValueViewController
+        
+        coreValueViewController.type = type
     }
 }
