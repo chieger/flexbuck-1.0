@@ -24,8 +24,11 @@ protocol StudentCellDelegate {
 class StudentCell: UITableViewCell {
 
     @IBOutlet weak var cellView: UIView!
-    @IBOutlet weak var studentNameLabel: UILabel!
     
+    @IBOutlet weak var firstNameLabel: UILabel!
+    
+    
+    @IBOutlet weak var lastNameLabel: UILabel!
     var segue: String!
     
     //We store a property to that we will notify when the cell changes state

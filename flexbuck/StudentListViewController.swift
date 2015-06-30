@@ -69,7 +69,8 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
         
         var cell = tableView.dequeueReusableCellWithIdentifier("StudentCell") as! StudentCell
         var student = students[indexPath.row]
-        cell.studentNameLabel.text = student["firstName"] as? String
+        cell.firstNameLabel.text = student["firstName"] as? String
+        cell.lastNameLabel.text = student["lastName"] as? String
         
         //Setting a variable (conceptually called a "delegate") on the cell
         cell.studentCellDelegate = self

@@ -104,11 +104,18 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" id="d0S-oe-F69" userLabel="cellView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="139" height="53.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="first name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="edU-2R-683">
-                                                            <rect key="frame" x="19" y="7.5" width="251" height="37.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lastName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f5i-Si-wMN">
+                                                            <rect key="frame" x="122" y="7" width="121" height="38.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="firstName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="edU-2R-683">
+                                                            <rect key="frame" x="19" y="7" width="107" height="38.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -125,10 +132,11 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellView" destination="d0S-oe-F69" id="kPr-c6-uPF"/>
+                                            <outlet property="firstNameLabel" destination="edU-2R-683" id="i8a-rQ-zLE"/>
                                             <outlet property="happyImageView" destination="UCD-53-hSb" id="6z3-TL-O6E"/>
+                                            <outlet property="lastNameLabel" destination="f5i-Si-wMN" id="zkc-S2-U8A"/>
                                             <outlet property="queryImageView" destination="sKl-k9-aR3" id="mDH-0Y-aXV"/>
                                             <outlet property="sadImageView" destination="Tsk-P8-c9y" id="XeV-hF-J6U"/>
-                                            <outlet property="studentNameLabel" destination="edU-2R-683" id="RPS-67-bPj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -288,6 +296,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="vm2-v0-Xnt">
+                                <rect key="frame" x="159" y="177" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Ym-Kl-kfG">
                                 <rect key="frame" x="222" y="154" width="17" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -323,12 +337,45 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="vm2-v0-Xnt">
-                                <rect key="frame" x="159" y="177" width="48" height="30"/>
+                            <view contentMode="scaleToFill" id="KzY-vO-kFA" userLabel="Congratulations View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sao-kp-UIe">
+                                        <rect key="frame" x="56" y="94" width="209" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="firstNameConfirmLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LjU-l5-abn">
+                                        <rect key="frame" x="8" y="179" width="145" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lastNameConfirmLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NS3-vQ-vRp">
+                                        <rect key="frame" x="169" y="179" width="143" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="has been added to flexbuck." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="woC-cr-Lep">
+                                        <rect key="frame" x="37" y="253" width="246" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.57134046052631571" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6cG-mR-ENe" appends="YES" id="UG1-kF-V0i"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -338,10 +385,13 @@
                     </view>
                     <connections>
                         <outlet property="advisorField" destination="YFd-60-Wz8" id="xOh-3V-ieR"/>
+                        <outlet property="firstNameAddedLabel" destination="LjU-l5-abn" id="Kpx-XU-tyD"/>
                         <outlet property="firstNameField" destination="3dW-TP-Rr1" id="zdD-9F-lnw"/>
                         <outlet property="gradeField" destination="vm2-v0-Xnt" id="CtJ-ce-iuH"/>
                         <outlet property="idField" destination="rAG-se-oRc" id="igv-rY-OMF"/>
+                        <outlet property="lastNameAddedLabel" destination="NS3-vQ-vRp" id="Mor-C3-CeE"/>
                         <outlet property="lastNameField" destination="e4s-es-nUN" id="M9v-uX-Wkx"/>
+                        <outlet property="studentAddedView" destination="KzY-vO-kFA" id="uSX-kJ-deU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLG-zY-qwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -353,6 +403,11 @@
                 <tapGestureRecognizer id="cP1-Z0-bqW">
                     <connections>
                         <action selector="onTapNewStudent:" destination="enp-8o-bWX" id="yqm-m3-28A"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="6cG-mR-ENe">
+                    <connections>
+                        <action selector="onTapCongratulations:" destination="enp-8o-bWX" id="1H3-Sa-4i5"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
