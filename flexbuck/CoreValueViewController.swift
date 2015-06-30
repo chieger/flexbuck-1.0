@@ -37,7 +37,14 @@ class CoreValueViewController: UIViewController {
     }
     
     @IBAction func onBackButton(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            var studentListViewController = self.storyboard!.instantiateViewControllerWithIdentifier("StudentListViewController") as! StudentListViewController
+            
+            var cell = studentListViewController.tableView.dequeueReusableCellWithIdentifier("StudentCell") as! StudentCell
+            
+            cell.cellView.center = cell.initialCenter
+            cell.setupIcons()
+        })
     }
     
     
