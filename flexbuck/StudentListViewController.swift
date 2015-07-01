@@ -40,6 +40,13 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        var cell = tableView.dequeueReusableCellWithIdentifier("StudentCell") as! StudentCell
+        //cell.cellView.frame = cell.contentView.bounds
+        //cell.setupIcons()
+    }
+    
     func onTimer() {
         
         // this sets up a query in the class "messege"
@@ -74,10 +81,10 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
         var student = students[indexPath.row]
         cell.firstNameLabel.text = student["firstName"] as? String
         cell.lastNameLabel.text = student["lastName"] as? String
-        
+        cell.selectionStyle = .None
         //Setting a variable (conceptually called a "delegate") on the cell
         cell.studentCellDelegate = self
-        
+        cell.cellView.frame = cell.contentView.bounds
         return cell
     }
     

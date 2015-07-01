@@ -20,6 +20,7 @@
 		ED2FFFEF1B39CBBA004B82DE /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2FFFEE1B39CBBA004B82DE /* StudentListViewController.swift */; };
 		ED2FFFF11B39CC18004B82DE /* CoreValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2FFFF01B39CC18004B82DE /* CoreValueViewController.swift */; };
 		ED2FFFF61B39D778004B82DE /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2FFFF51B39D778004B82DE /* StudentCell.swift */; };
+		EDBE1B2A1B43A6FD0052E90D /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE1B291B43A6FD0052E90D /* colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		ED2FFFF01B39CC18004B82DE /* CoreValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreValueViewController.swift; sourceTree = "<group>"; };
 		ED2FFFF21B39CED6004B82DE /* flexbuck-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "flexbuck-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED2FFFF51B39D778004B82DE /* StudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
+		EDBE1B291B43A6FD0052E90D /* colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 		FD5748520D52BB6E6E785786 /* Pods-flexbuck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flexbuck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flexbuck/Pods-flexbuck.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				ED2FFFC91B39CB02004B82DE /* Supporting Files */,
 				ED2FFFF21B39CED6004B82DE /* flexbuck-Bridging-Header.h */,
 				ED2FFFF51B39D778004B82DE /* StudentCell.swift */,
+				EDBE1B291B43A6FD0052E90D /* colors.swift */,
 			);
 			path = flexbuck;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				ED2FFFF61B39D778004B82DE /* StudentCell.swift in Sources */,
 				ED2FFFCE1B39CB02004B82DE /* ViewController.swift in Sources */,
 				ED2FFFCC1B39CB02004B82DE /* AppDelegate.swift in Sources */,
+				EDBE1B2A1B43A6FD0052E90D /* colors.swift in Sources */,
 				ED1B48391B41F28700F8766D /* HamburgerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

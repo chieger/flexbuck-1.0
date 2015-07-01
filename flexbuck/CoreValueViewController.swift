@@ -20,10 +20,10 @@ class CoreValueViewController: UIViewController {
         
         
         if type == "flexbuck" {
-            view.backgroundColor = UIColor.blueColor()
+            view.backgroundColor = green
             textLabel.text = type
         } else {
-            view.backgroundColor = UIColor.redColor()
+            view.backgroundColor = red
             textLabel.text = type
         }
         
@@ -37,14 +37,7 @@ class CoreValueViewController: UIViewController {
     }
     
     @IBAction func onBackButton(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: { () -> Void in
-            var studentListViewController = self.storyboard!.instantiateViewControllerWithIdentifier("StudentListViewController") as! StudentListViewController
-            
-            var cell = studentListViewController.tableView.dequeueReusableCellWithIdentifier("StudentCell") as! StudentCell
-            
-            cell.cellView.center = cell.initialCenter
-            cell.setupIcons()
-        })
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     
